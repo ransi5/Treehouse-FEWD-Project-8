@@ -1,0 +1,45 @@
+.grid{
+  display: grid;
+  grid-template-columns: 33.34% 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: $gutter;
+  grid-template-areas:
+  'img text';
+}
+
+main{
+  width: 90%;
+  margin: auto;
+  @include gallerygrid(300px, $gutter);
+  align-items: center;
+  .card{
+    padding: 30px 10px;
+    border: 2px solid $primeShadowcolor;
+    border-radius: $borderrad;
+    box-shadow: 0px 0px 4px 1px $primeShadowcolor;
+    -webkit-box-shadow: 0px 0px 4px 1px $primeShadowcolor;
+    -moz-box-shadow: 0px 0px 4px 1px $primeShadowcolor;
+    &:hover{
+      cursor: pointer;
+      background-color: lighten($hovbackcolor, 5%);
+      transform: scale(1.03);
+      transition: transform .5s;
+    }
+    .avatar{
+      grid-area: img;
+      @extend .commonimg;
+    }
+    .text-container{
+      grid-area: text;
+      margin: auto 0px;
+      h3{
+        margin: 5px 0px;
+      }
+      p{
+        margin: 5px 0px;
+        font-size: .83em;
+        color: darken($fontpcolor,30%);
+      }
+    }
+  }
+}

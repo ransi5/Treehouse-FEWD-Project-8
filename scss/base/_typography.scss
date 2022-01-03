@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  font-family: $fontfamily;
+}
+
+.commonimg{
+  width: 100%;
+  border-radius: $bordround;
+  margin: auto;
+}
+
+.hidden{
+  display: none;
+}
+
+.show{
+  display: block;
+}

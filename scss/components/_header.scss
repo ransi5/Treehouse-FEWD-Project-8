@@ -1,0 +1,34 @@
+header{
+  display: flex;
+  width: 90%;
+  margin: 1.2em auto 1.2em;
+  flex-wrap: wrap;
+  h1 {
+    font-size: 1.6em;
+    flex: 1 50%;
+    @media (max-width: 768px){
+      flex: 2 100%;
+      min-width: 100%
+    }
+  }
+  input{
+    flex: 1 50%;
+    width: 100%;
+    outline: none;
+    border: 2px solid $primeShadowcolor;
+    box-shadow: inset 0px 0px 4px 1px $primeShadowcolor;
+    font-size: 1.3em;
+    height: inherit;
+    padding: 5px 20px;
+    border-radius: $borderrad;
+    @media (max-width: 768px){
+      flex: 2 100%;
+      min-width: 100%
+    }
+    &:hover, &:active {
+      box-shadow: inset 0px 0px 4px 1px $primeShadowcolor;
+      transform: scale(1.05);
+      transition: all .5s;
+    }
+  }
+}

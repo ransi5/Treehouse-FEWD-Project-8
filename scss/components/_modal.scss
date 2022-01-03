@@ -1,0 +1,85 @@
+.overlay{
+  background-color: $modbackcolor;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .arrow{
+    position: absolute;
+    font-size: 5em;
+    color: white;
+    &:hover{
+      transform: scale(1.2);
+      transition: transform .5s;
+      cursor: pointer;
+      color: #32de84;
+    }
+  }
+  .modal{
+    position: absolute;
+    top: 14%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 10px;
+    width: 34%;
+    max-width: 350px;
+    border-radius: $borderrad;
+    z-index: 100;
+    @media (max-width: 768px){
+      width: 50%;
+    }
+    #modal-close{
+      margin: 10px 20px 0px auto;
+      display: flex;
+      justify-content: flex-end;
+      &:hover{
+        cursor: pointer;
+        color: red;
+        transform: scaleY(1.4);
+        transition: transform .5s;
+      }
+    }
+    .modal-content{
+      text-align: center;
+      color: darken($fontpcolor,30%);
+    }
+    img{
+      border-radius: $bordround;
+      margin-bottom: 30px;
+      margin-top: 20px;
+    }
+    h3{
+      color: black;
+      margin: 5px 0px;
+    }
+    p{
+      margin: 5px 0px;
+    }
+    hr{
+      margin: 30px 8px;
+    }
+    hr ~ p{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@keyframes xmoveLeft {
+  100% {margin-left: 100%;}
+}
+
+@keyframes nxmoveLeft {
+  100% {margin-left: auto;}
+}
+
+@keyframes xmoveright {
+  100% {margin-left: 100%;}
+}
+
+@keyframes nxmoveright {
+  100% {margin-left: auto;}
+}

@@ -6,13 +6,12 @@ fetch('https://randomuser.me/api/?results=12&nat=us&inc=name,email,phone,locatio
 
 
 function generateEmployees(data){
-console.log(data);
+
   const grid = document.getElementById('grid-container');
 
   for (var i = 0; i < data.length; i++) {
 
     let empName = `${data[i].name.first} ${data[i].name.last}`;
-
     let card = document.createElement('div');
     card.className = 'card grid';
     card.id = i + 1;
@@ -40,8 +39,8 @@ console.log(data);
     textContainer.appendChild(para1);
 
     let para2 = document.createElement('p');
-    para2.className = 'phone';
-    para2.textContent = data[i].phone;
+    para2.className = 'city';
+    para2.textContent = data[i].location.city;
     textContainer.appendChild(para2);
   };
   generateModal(data)
